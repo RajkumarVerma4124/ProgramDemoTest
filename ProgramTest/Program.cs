@@ -83,7 +83,7 @@ namespace ProgramTest
                     case 9:
                         //Adding numbers
                         Console.Write("How many numbers you want to add : ");
-                        Console.WriteLine("1 : Three Numbers , 2 : Two Numbers");
+                        Console.WriteLine("1 : Three Numbers , 2 : Two Numbers 3: Calculator");
                         int numToAdd = int.Parse(Console.ReadLine());
                         switch (numToAdd)
                         {
@@ -104,6 +104,38 @@ namespace ProgramTest
                                 int y2 = int.Parse(Console.ReadLine());
                                 Console.Write("Addition Of Two Numbers Is : " + DataFormat.AddNumbers(x1, y2));
                                 Console.ReadLine();
+                                break;
+                            case 3:
+                                Console.Write("Enter The First Number to calaculte : ");
+                                Calculator.num1 = int.Parse(Console.ReadLine());
+                                Console.Write("Enter The Second Number to calaculte : ");
+                                Calculator.num2 = int.Parse(Console.ReadLine());
+                                Console.Write("Enter the choice to calculate + - * / : ");
+                                char ch = Console.ReadLine()[0];
+                                switch (ch)
+                                {
+                                    case '+':
+                                        Console.Write(Calculator.num1 + " + " + Calculator.num2 + " = " + Calculator.getAdd());
+                                        Console.WriteLine();
+                                        break;
+                                    case '-':
+                                        Console.Write(Calculator.num1 + " - " + Calculator.num2 + " = " + Calculator.getSub());
+                                        Console.WriteLine();
+                                        break;
+                                    case '*':
+                                        Console.Write(Calculator.num1 + " * " + Calculator.num2 + " = " + Calculator.getMul(Calculator.num1, Calculator.num2));
+                                        Console.WriteLine();
+                                        break;
+                                    case '/':
+                                        Console.Write(Calculator.num1 + " / " + Calculator.num2 + " = " + Calculator.getDiv());
+                                        Console.WriteLine();
+                                        break;
+                                    default:
+                                        Console.WriteLine("Not a  valid command");
+                                        Console.WriteLine();
+                                        break;
+
+                                }
                                 break;
                             default:
                                 Console.WriteLine("Enter The choice between 2 and 3");
