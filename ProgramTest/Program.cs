@@ -20,7 +20,7 @@ namespace ProgramTest
             while (true)
             {
                 Console.Write("Enter The Choices from below\n");
-                Console.Write("1: Printing Message \n2: Print Student Data \n3: Print Full Name and Age \n4: Number Format\n5: Data Conversion\n6: Math Operations \n7: Generating Random Number\n8: Array Sorting and Math Operations\n9: Addition of Number\n10: Exit Program\n");
+                Console.Write("1: Printing Message \n2: Print Student Data \n3: Print Full Name and Age \n4: Number Format\n5: Data Conversion\n6: Math Operations \n7: Generating Random Number\n8: Array Sorting and Math Operations\n9: Addition of Number\n10:Monthly Employee Wage \n11: Exit Program\n");
                 int switchOptions = int.Parse(Console.ReadLine());
                 switch (switchOptions)
                 {
@@ -112,6 +112,9 @@ namespace ProgramTest
                         }
                         break;
                     case 10:
+                        EmployeeWageComputation.MEmpWageForMulComp();
+                        break;
+                    case 11:
                         Environment.Exit(0);
                         return;
 
